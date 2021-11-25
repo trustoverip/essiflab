@@ -4,4 +4,4 @@ This is a repo within which eSSIF-Lab terminology is experimentally subjected to
 
 Terms defined in this repo can be found using the tag `#essiflab`.
 
-Currently, there only a (handmade) [glossary](docs/glossary) is available.
+Currently, there only a (handmade) [glossary](docs/glossary.html) is available.
