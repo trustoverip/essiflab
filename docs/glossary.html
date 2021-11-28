@@ -1,6 +1,6 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>eSSIF-Lab Glossary</title>
-    <style>
+  <style>
   body {
       background-color: white;
       padding: 0px;
@@ -21,9 +21,15 @@
   }
 
   main {
-      padding: 16px;
+      padding: 16px 24px;
       color: #444;
   }
+
+@media screen and (min-width: 640px) {
+  main {
+      padding: 24px 64px;
+  }
+}
 
   dt {
       margin-top: 1.4em;
@@ -112,6 +118,33 @@
     color: #666;
   }
 
+  ._slf {
+    float: left;
+    padding-right: 4px;
+    padding-top: 4px;
+    margin-left: -20px;
+    cursor: pointer;
+    width:16px;
+    height:16px;
+    display: none;
+  }
+
+  dt:not(.letter):hover > ._slf {
+      display: inline;
+  }
+
+  ._xl {
+      padding-right: 4px;
+      display: none;
+      cursor: pointer;
+      width:16px;
+      height:16px;
+  }
+
+  dt:not(.letter):hover > ._xl {
+    display: inline;
+  }
+
   .footer {
     position: fixed;
     left: 0;
@@ -124,445 +157,480 @@
     margin-right: 4px;
     text-align: center;
     }
-    </style>
+  </style>
+
+  <script>
+  var getAbsoluteUrl = (function() {
+    var a;
+    return function(url) {
+        if (!a)
+          a = document.createElement('a');
+        a.href = url;
+        return a.href;
+    };
+  })();
+
+  function copyUrl(url) {
+    x = getAbsoluteUrl(url);
+    navigator.clipboard.writeText(x);
+  }
+
+  function goto(url) {
+    window.location = url;
+  }
+  </script>
   </head>
-  <body>
+<body>
+
+<svg style="display:none">
+  <symbol id="_slf" viewBox="0 0 16 16">
+    <path style="fill:#aaa" fill-rule="evenodd"
+          d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"/>
+  </symbol>
+  <symbol id="_xl" viewBox="0 -256 1850 1850">
+    <g transform="matrix(1,0,0,-1,30.372881,1426.9492)">
+      <path style="fill:#aaa"
+         d="M 1408,608 V 288 Q 1408,169 1323.5,84.5 1239,0 1120,0 H 288 Q 169,0 84.5,84.5 0,169 0,288 v 832 Q 0,1239 84.5,1323.5 169,1408 288,1408 h 704 q 14,0 23,-9 9,-9 9,-23 v -64 q 0,-14 -9,-23 -9,-9 -23,-9 H 288 q -66,0 -113,-47 -47,-47 -47,-113 V 288 q 0,-66 47,-113 47,-47 113,-47 h 832 q 66,0 113,47 47,47 47,113 v 320 q 0,14 9,23 9,9 23,9 h 64 q 14,0 23,-9 9,-9 9,-23 z m 384,864 V 960 q 0,-26 -19,-45 -19,-19 -45,-19 -26,0 -45,19 L 1507,1091 855,439 q -10,-10 -23,-10 -13,0 -23,10 L 695,553 q -10,10 -10,23 0,13 10,23 l 652,652 -176,176 q -19,19 -19,45 0,26 19,45 19,19 45,19 h 512 q 26,0 45,-19 19,-19 19,-45 z" />
+    </g>
+  </symbol>
+</svg>
+
   <header>G L O S S A R Y</header>
  <main>
     <p class="box">This glossary has been manually created to enable ToIP WGs and TFs to use eSSIF-Lab terminology in their texts.</br>
     This glossary only shows the bare minimum of the term descriptions.</br>
     Clicking on the term name will take you to the eSSIF-Lab site that has the full descriptions.</p>
 
- <!-- end of copie headers, start of actual glossary stuff -->
+ <!-- end of headers, start of actual glossary stuff -->
 
  <dl>
 
  <dt id="A" class="letter">A</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="action"><a href="https://essif-lab.github.io/framework/docs/terms/action">Action</a> <span class="tag">#essiflab</span></dt>
+ <dt id="action"><svg class="_slf" onclick="copyUrl('#action')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/action">Action</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>something that is actually done/executed - by a single <a href="#actor">actor</a> (on behalf of a given <a href="#party">party</a>), as a single operation in a specific context.</dd>
 
- <dt id="actor"><a href="https://essif-lab.github.io/framework/docs/terms/actor">Actor</a> <span class="tag">#essiflab</span></dt>
+ <dt id="actor"><svg class="_slf" onclick="copyUrl('#actor')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/actor">Actor</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>Entity that can act (do things), e.g. people, machines, but not <a href="#organization">organizations</a>.</dd>
 
- <dt id="agent"><a href="https://essif-lab.github.io/framework/docs/terms/agent">Agent</a> <span class="tag">#essiflab</span></dt>
+ <dt id="agent"><svg class="_slf" onclick="copyUrl('#agent')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/agent">Agent</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#actor">actor</a> that is executing an <a href="#action">action</a> on behalf of a <a href="#party">party</a> (called the <a href="#principal">principal</a> of that <a href="#actor">actor</a>).</dd>
 
- <dt id="assertion"><a href="https://essif-lab.github.io/framework/docs/terms/assertion">Assertion</a> <span class="tag">#essiflab</span></dt>
+ <dt id="assertion"><svg class="_slf" onclick="copyUrl('#assertion')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/assertion">Assertion</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a declaration/statement, made by a specific <a href="#party">party</a>, that something is the case.</dd>
 
- <dt id="attribute"><a href="https://essif-lab.github.io/framework/docs/terms/attribute">Attribute</a> <span class="tag">#essiflab</span></dt>
+ <dt id="attribute"><svg class="_slf" onclick="copyUrl('#attribute')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/attribute">Attribute</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd><a href="#data">Data</a>, that represents a characteristic that a <a href="#party">party</a> (the <a href="#owner">owner</a> of the <a href="#attribute">attribute</a>) has attributed to an <a href="#entity">entity</a>.</dd>
 
- <dt id="authority"><a href="https://essif-lab.github.io/framework/docs/terms/authority">Authority</a> <span class="tag">#essiflab</span></dt>
+ <dt id="authority"><svg class="_slf" onclick="copyUrl('#authority')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/authority">Authority</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#party">party</a> of which certain decisions, ideas, rules etc. are followed by other <a href="#party">parties</a>. Autorities can be a <a href="https://essif-lab.github.io/framework/docs/terms/authority">centralized or decentralized<a>.</dd>
 
  <dt id="B" class="letter">B</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="business-transaction"><a href="#Transaction">Business Transaction</a> <span class="tag">#essiflab</span></dt>
+ <dt id="business-transaction"><svg class="_slf" onclick="copyUrl('#business-transaction')"><use href="#_slf"/></svg><a href="#Transaction">Business Transaction</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>See: <a href="#transaction">transaction</a>.</dd>
 
  <dt id="C" class="letter">C</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="colleague"><a href="https://essif-lab.github.io/framework/docs/terms/colleague">Colleague</a> <span class="tag">#essiflab</span></dt>
+ <dt id="colleague"><svg class="_slf" onclick="copyUrl('#colleague')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/colleague">Colleague</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>two or more (digital or non-digital) <a href="#agent">agents</a> that have the same <a href="#Principal">principal</a> (i.e. <a href="#Party">party</a> on whose behalf they exeucte <a href="#action">actions</a>).</dd>
 
- <dt id="commitment-decision"><a href="https://essif-lab.github.io/framework/docs/terms/commitment-decision">Commitment Decision</a> <span class="tag">#essiflab</span></dt>
+ <dt id="commitment-decision"><svg class="_slf" onclick="copyUrl('#commitment-decision')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/commitment-decision">Commitment Decision</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the decision of that <a href="#party">party</a> whether or not to commit to that <a href="#transaction">business transaction</a>, i.e. (promise) to fulfill the obligations that the associated <a href="#transaction-proposal">transaction agreement proposal</a> would impose on that <a href="#party">party</a> once it were signed.</dd>
 
- <dt id="communication-channel"><a href="https://essif-lab.github.io/framework/docs/terms/communication-channel">Communication Channel</a> <span class="tag">#essiflab</span></dt>
+ <dt id="communication-channel"><svg class="_slf" onclick="copyUrl('#communication-channel')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/communication-channel">Communication Channel</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a (digital or non-digital) means by which two <a href="#actor">actors</a> can exchange messages with one another.</dd>
 
- <dt id="communication-session"><a href="https://essif-lab.github.io/framework/docs/terms/communication-session">Communication Session</a> <span class="tag">#essiflab</span></dt>
+ <dt id="communication-session"><svg class="_slf" onclick="copyUrl('#communication-session')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/communication-session">Communication Session</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a time interval during which two <a href="#actor">actors</a> have an established <a href="#communication-channel">communication channel</a> that does not exist outside of that time interval.</dd>
 
- <dt id="community"><a href="https://essif-lab.github.io/framework/docs/terms/community">Community</a> <span class="tag">#essiflab</span></dt>
+ <dt id="community"><svg class="_slf" onclick="copyUrl('#community')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/community">Community</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#party">party</a>, consisting of at least two different <a href="#party">parties</a> (the members of the <a href="#community">community</a>) that seek to collaborate with each other so that each of them can achieve its individual <a href="#objective">objectives</a> more efficiently and/or effectively.</dd>
 
- <dt id="concept"><a href="https://essif-lab.github.io/framework/docs/terms/concept">Concept</a> <span class="tag">#essiflab</span></dt>
+ <dt id="concept"><svg class="_slf" onclick="copyUrl('#concept')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/concept">Concept</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the ideas/thoughts behind a classification of <a href="#entity">entities</a> (what makes <a href="#entity">entities</a> in that class 'the same').</dd>
 
- <dt id="concept-file"><a href="https://essif-lab.github.io/framework/docs/terms/concept-file">Concept-file</a> <span class="tag">#essiflab</span></dt>
+ <dt id="concept-file"><svg class="_slf" onclick="copyUrl('#concept-file')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/concept-file">Concept-file</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a file whose contents defines/specifies a <a href="#concept">concept</a>.</dd>
 
- <dt id="control-process"><a href="https://essif-lab.github.io/framework/docs/terms/control-process">Control Process</a> <span class="tag">#essiflab</span></dt>
+ <dt id="control-process"><svg class="_slf" onclick="copyUrl('#control-process')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/control-process">Control Process</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a process, <a href="#owned">owned</a> and run by a <a href="#party">party</a>, to ensure that a specific subset of its control <a href="#objective">objectives</a> are realized.</dd>
 
- <dt id="corpus-of-terminology"><a href="https://essif-lab.github.io/framework/docs/terms/corpus-of-terminology">Corpus of Terminology</a> <span class="tag">#essiflab</span></dt>
+ <dt id="corpus-of-terminology"><svg class="_slf" onclick="copyUrl('#corpus-of-terminology')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/corpus-of-terminology">Corpus of Terminology</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the documentation that describes the <a href="#knowledge">knowledge</a> around a set of <a href="#term">terms</a> and <a href="#concept">concepts</a>.</dd>
 
- <dt id="credential"><a href="https://essif-lab.github.io/framework/docs/terms/credential">Credential</a> <span class="tag">#essiflab</span></dt>
+ <dt id="credential"><svg class="_slf" onclick="copyUrl('#credential')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/credential">Credential</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>data, representing a set of <a href="#assertion">assertions</a> (claims, statements), authored and signed by, or on behalf of, a specific <a href="#party">party</a>.</dd>
 
- <dt id="credential-catalogue"><a href="https://essif-lab.github.io/framework/docs/terms/credential-catalogue">Credential Catalogue</a> <span class="tag">#essiflab</span></dt>
+ <dt id="credential-catalogue"><svg class="_slf" onclick="copyUrl('#credential-catalogue')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/credential-catalogue">Credential Catalogue</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a functional component that has the capability to register and advertise the information about <a href="#credential-type">credential types</a> that their respective <a href="#governance">governing parties</a> have decided to disclose so as to enable other <a href="#party">parties</a> to decide whether or not it is beneficial for them to use <a href="#credential">credentials</a> of such types.</dd>
 
- <dt id="credential-type"><a href="https://essif-lab.github.io/framework/docs/terms/credential-type">Credential Type</a> <span class="tag">#essiflab</span></dt>
+ <dt id="credential-type"><svg class="_slf" onclick="copyUrl('#credential-type')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/credential-type">Credential Type</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the specification of the contents, properties, constraints etc. that <a href="#credential">credentials</a> of this type must have/comply with.</dd>
 
  <dt id="D" class="letter">D</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="data"><a href="https://essif-lab.github.io/framework/docs/terms/data">Data</a> <span class="tag">#essiflab</span></dt>
+ <dt id="data"><svg class="_slf" onclick="copyUrl('#data')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/data">Data</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>something (tangible) that can be used to communicate a meaning (which is intangible/information).</dd>
 
- <dt id="data-collector"><a href="https://essif-lab.github.io/framework/docs/terms/data-collector">Data Collector</a> <span class="tag">#essiflab</span></dt>
+ <dt id="data-collector"><svg class="_slf" onclick="copyUrl('#data-collector')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/data-collector">Data Collector</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a functional component that is capable of collecting data from various <a href="#party">parties</a> in the context of some <a href="#transaction">business transaction</a>, and <a href="#validate">validating</a> this data for the purpose of making one (or more) decision(s).</dd>
 
- <dt id="data-collector-policy"><a href="https://essif-lab.github.io/framework/docs/terms/data-collector-policy">Data Collector Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="data-collector-policy"><svg class="_slf" onclick="copyUrl('#data-collector-policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/data-collector-policy">Data Collector Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#digital-policy">digital policy</a> that enables an operational <a href="#data-collector">data collector</a> component to function in accordance with the <a href="#objective">objectives</a> of its <a href="#principal">principal</a>.</dd>
 
- <dt id="data-discloser"><a href="https://essif-lab.github.io/framework/docs/terms/data-discloser">Data Discloser</a> <span class="tag">#essiflab</span></dt>
+ <dt id="data-discloser"><svg class="_slf" onclick="copyUrl('#data-discloser')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/data-discloser">Data Discloser</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a functional component that is capable of disclosing data to (Agents of) other <a href="#party">parties</a>, e.g. in the form of <a href="#credential">credentials</a>.</dd>
 
- <dt id="data-discloser-policy"><a href="https://essif-lab.github.io/framework/docs/terms/data-discloser-policy">Data Discloser Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="data-discloser-policy"><svg class="_slf" onclick="copyUrl('#data-discloser-policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/data-discloser-policy">Data Discloser Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#digital-policy">digital policy</a> that enables an operational <a href="#data-discloser">data discloser</a> component to function in accordance with the <a href="#objective">objectives</a> of its <a href="#principal">principal</a>.</dd>
 
- <dt id="decision"><a href="https://essif-lab.github.io/framework/docs/terms/decision">Decision</a> <span class="tag">#essiflab</span></dt>
+ <dt id="decision"><svg class="_slf" onclick="copyUrl('#decision')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/decision">Decision</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the conclusion that a <a href="#party">party</a> inferences from a set of <a href="#data">data</a> that it considers to be facts.</dd>
 
- <dt id="definition"><a href="https://essif-lab.github.io/framework/docs/terms/definition">Definition</a> <span class="tag">#essiflab</span></dt>
+ <dt id="definition"><svg class="_slf" onclick="copyUrl('#definition')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/definition">Definition</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a text that helps <a href="#party">parties</a> to have the same understanding about the meaning of (and <a href="#concept">concepts</a> behind) a <a href="#term">term</a>, ideally in such a way that these <a href="#party">parties</a> can determine whether or not they make the same distinction.</dd>
 
- <dt id="dependent"><a href="https://essif-lab.github.io/framework/docs/terms/dependent">Dependent</a> <span class="tag">#essiflab</span></dt>
+ <dt id="dependent"><svg class="_slf" onclick="copyUrl('#dependent')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/dependent">Dependent</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#entity">entity</a> for the caring for and/or protecting/guarding/defending of which a <a href="#guardianship-arrangement">guardianship arrangement</a> has been established.</dd>
 
- <dt id="dictionary"><a href="https://essif-lab.github.io/framework/docs/terms/dictionary">Dictionary</a> <span class="tag">#essiflab</span></dt>
+ <dt id="dictionary"><svg class="_slf" onclick="copyUrl('#dictionary')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/dictionary">Dictionary</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an alphabetically sorted list of <a href="#term">terms</a> with various meanings they may have in different contexts.</dd>
 
- <dt id="digital-actor"><a href="https://essif-lab.github.io/framework/docs/terms/digital-actor">Digital Actor</a> <span class="tag">#essiflab</span></dt>
+ <dt id="digital-actor"><svg class="_slf" onclick="copyUrl('#digital-actor')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/digital-actor">Digital Actor</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#actor">actor</a> in the digital world (e.g. a running app, or a web-server).</dd>
 
- <dt id="digital-agent"><a href="https://essif-lab.github.io/framework/docs/terms/digital-agent">Digital Agent</a> <span class="tag">#essiflab</span></dt>
+ <dt id="digital-agent"><svg class="_slf" onclick="copyUrl('#digital-agent')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/digital-agent">Digital Agent</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#agent">agent</a> in the digital world (e.g. a running app, or a web-server that is executing an <a href="#action">action</a> for a specific <a href="#party">party</a> (its <a href="#principal">principal</a>)).</dd>
 
- <dt id="digital-colleague"><a href="https://essif-lab.github.io/framework/docs/terms/digital-colleague">Digital Colleague</a> <span class="tag">#essiflab</span></dt>
+ <dt id="digital-colleague"><svg class="_slf" onclick="copyUrl('#digital-colleague')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/digital-colleague">Digital Colleague</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>two or more <a href="#digital-agent">digital agents</a> that all have the same <a href="#principal">principal</a> (i.e. <a href="#party">party</a> on whose behalf they exeucte <a href="#action">actions</a>).</dd>
 
- <dt id="digital-communication-channel"><a href="https://essif-lab.github.io/framework/docs/terms/digital-communication-channel">Digital Communication Channel</a> <span class="tag">#essiflab</span></dt>
+ <dt id="digital-communication-channel"><svg class="_slf" onclick="copyUrl('#digital-communication-channel')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/digital-communication-channel">Digital Communication Channel</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a digital means by which two <a href="#digital-actor">digital actors</a> can exchange messages with one another.</dd>
 
- <dt id="digital-data"><a href="https://essif-lab.github.io/framework/docs/terms/digital-data">Digital Data</a> <span class="tag">#essiflab</span></dt>
+ <dt id="digital-data"><svg class="_slf" onclick="copyUrl('#digital-data')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/digital-data">Digital Data</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a sequence of bits that can be used to communicate meaning/information.</dd>
 
- <dt id="digital-policy"><a href="https://essif-lab.github.io/framework/docs/terms/digital-policy">Digital Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="digital-policy"><svg class="_slf" onclick="copyUrl('#digital-policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/digital-policy">Digital Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a machine-readable <a href="#policy">policy</a> that enables <a href="#digital-agent">digital agents</a> whose <a href="#principal">principal</a> is the <a href="#policy">policy</a>'s <a href="#governance">governor</a>, to execute <a href="#action">actions</a> of such types in compliance with that <a href="#policy">policy</a> (i.e.: according to the rules, working-instructions, preferences and other guidance specified therein).</dd>
 
- <dt id="documentation-interoperability"><a href="https://essif-lab.github.io/framework/docs/terms/documentation-interoperability">Documentation Interoperability</a> <span class="tag">#essiflab</span></dt>
+ <dt id="documentation-interoperability"><svg class="_slf" onclick="copyUrl('#documentation-interoperability')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/documentation-interoperability">Documentation Interoperability</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the property that a documentation system of making its content comprehensible for a variety of people that come from different backgrounds.</dd>
 
  <dt id="E" class="letter">E</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="ecosystem"><a href="https://essif-lab.github.io/framework/docs/terms/ecosystem">Ecosystem</a> <span class="tag">#essiflab</span></dt>
+ <dt id="ecosystem"><svg class="_slf" onclick="copyUrl('#ecosystem')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/ecosystem">Ecosystem</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a set of at least two (autonomous) <a href="#party">parties</a> (its 'members') whose individual work complements that of other members, and is of benefit to the set as a whole.</dd>
 
- <dt id="employee"><a href="https://essif-lab.github.io/framework/docs/terms/employee">Employee</a> <span class="tag">#essiflab</span></dt>
+ <dt id="employee"><svg class="_slf" onclick="copyUrl('#employee')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/employee">Employee</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#actor">actor</a> for whom/which it is realistic that it might execute <a href="#action">actions</a> on behalf of a <a href="#party">party</a> (called the <a href="#employer">employer</a> of that <a href="#actor">actor</a>).</dd>
 
- <dt id="employer"><a href="https://essif-lab.github.io/framework/docs/terms/employer">Employer</a> <span class="tag">#essiflab</span></dt>
+ <dt id="employer"><svg class="_slf" onclick="copyUrl('#employer')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/employer">Employer</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#party">party</a> on whose behalf an <a href="#actor">actor</a> (called an <a href="#employee">employee</a> of that <a href="#party">party</a>) might execute <a href="#action">actions</a>.</dd>
 
- <dt id="entity"><a href="https://essif-lab.github.io/framework/docs/terms/entity">Entity</a> <span class="tag">#essiflab</span></dt>
+ <dt id="entity"><svg class="_slf" onclick="copyUrl('#entity')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/entity">Entity</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>someone or something that is known to exist.</dd>
 
- <dt id="essif-glue"><a href="https://essif-lab.github.io/framework/docs/terms/essif-glue">eSSIF-Glue</a> <span class="tag">#essiflab</span></dt>
+ <dt id="essif-glue"><svg class="_slf" onclick="copyUrl('#essif-glue')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/essif-glue">eSSIF-Glue</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>interface layer that allows components with <a href="#transaction-data-collector">transaction data collector</a> and/or <a href="#transaction-data-discloser">transaction data discloser</a> functionality to use the <a href="#wallet">wallet</a>, <a href="#holder">holder</a>, <a href="#issuer">issuer</a> and <a href="#verifier">verifier</a> functionalities.</dd>
 
  <dt id="G" class="letter">G</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="glossary"><a href="https://essif-lab.github.io/framework/docs/terms/glossary">Glossary</a> <span class="tag">#essiflab</span></dt>
+ <dt id="glossary"><svg class="_slf" onclick="copyUrl('#glossary')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/glossary">Glossary</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an alphabetically sorted list of <a href="#term">terms</a> with the (single) meaning it has in (at least) one context.</dd>
 
- <dt id="governance"><a href="https://essif-lab.github.io/framework/docs/terms/governance">Governance</a> <span class="tag">#essiflab</span></dt>
+ <dt id="governance"><svg class="_slf" onclick="copyUrl('#governance')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/governance">Governance</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the <a href="#action">act</a> or process of governing or overseeing the realization of (the results associated with) a set of <a href="#objective">objectives</a> by the <a href="#owner">owner</a> of these <a href="#objective">objectives</a>.</dd>
 
-  <dt id="guardian"><a href="https://essif-lab.github.io/framework/docs/terms/guardian">Guardian</a> <span class="tag">#essiflab</span></dt>
+  <dt id="guardian"><svg class="_slf" onclick="copyUrl('#guardian')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/guardian">Guardian</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#party">party</a> that has been assigned rights and duties in a <a href="#guardianship-arrangement">Guardianship Arrangement</a> for the purpose of caring for and/or protecting/guarding/defending the <a href="#entity">entity</a> that is the <a href="#dependent">dependent</a> in that Guardianship Arrangement.</dd>
 
- <dt id="guardianship-arrangement"><a href="https://essif-lab.github.io/framework/docs/terms/guardianship-arrangement">Guardianship Arrangement</a> <span class="tag">#essiflab</span></dt>
+ <dt id="guardianship-arrangement"><svg class="_slf" onclick="copyUrl('#guardianship-arrangement')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/guardianship-arrangement">Guardianship Arrangement</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>Guardianship Arrangement (in a Jurisdiction): the specification of a set of rights and duties between <a href="#legal-entity">legal entities</a> of the <a href="#jurisdiction">jurisdiction</a> that enforces these rights and duties, for the purpose of caring for and/or protecting/guarding/defending one or more of these <a href="#legal-entity">entities</a>.</dd>
 
- <dt id="guardianship-type"><a href="https://essif-lab.github.io/framework/docs/terms/guardianship-type">Guardianship-type</a> <span class="tag">#essiflab</span></dt>
+ <dt id="guardianship-type"><svg class="_slf" onclick="copyUrl('#guardianship-type')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/guardianship-type">Guardianship-type</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a class of <a href="#guardianship-arrangement">guardianship arrangements</a> within the <a href="#jurisdiction">jurisdiction</a> that governs and manages them.</dd>
 
  <dt id="H" class="letter">H</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="holder"><a href="https://essif-lab.github.io/framework/docs/terms/holder">Holder</a> <span class="tag">#essiflab</span></dt>
+ <dt id="holder"><svg class="_slf" onclick="copyUrl('#holder')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/holder">Holder</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the capability to handle presentation requests from a <a href="#peer-agent">peer agent</a>, produce the requested data (a presentation) according to its <a href="#principal">principal</a>'s holder-policy, and send that in response to the request.</dd>
 
- <dt id="holder-policy"><a href="https://essif-lab.github.io/framework/docs/terms/holder-policy">Holder Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="holder-policy"><svg class="_slf" onclick="copyUrl('#holder-policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/holder-policy">Holder Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#digital-policy">digital policy</a> that enables an operational <a href="#holder">holder</a> component to function in accordance with the <a href="#objective">objectives</a> of its <a href="#principal">principal</a>.</dd>
 
- <dt id="human-being"><a href="https://essif-lab.github.io/framework/docs/terms/human-being">Human Being</a> <span class="tag">#essiflab</span></dt>
+ <dt id="human-being"><svg class="_slf" onclick="copyUrl('#human-being')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/human-being">Human Being</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a person of flesh and blood (homo sapiens), that we classify both as a <a href="#party">party</a>,an <a href="#actor">actor</a>, and a <a href="#jurisdiction">jurisdiction</a>.</dd>
 
  <dt id="I" class="letter">I</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="identifier"><a href="https://essif-lab.github.io/framework/docs/terms/identifier">Identifier</a> <span class="tag">#essiflab</span></dt>
+ <dt id="identifier"><svg class="_slf" onclick="copyUrl('#identifier')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/identifier">Identifier</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a character string that is being used for the identification of some <a href="#entity">entity</a> (yet may refer to 0, 1, or more <a href="#entity">entities</a>, depending on the context within which it is being used).</dd>
 
- <dt id="identify"><a href="https://essif-lab.github.io/framework/docs/terms/identify">Identify</a> <span class="tag">#essiflab</span></dt>
+ <dt id="identify"><svg class="_slf" onclick="copyUrl('#identify')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/identify">Identify</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#action">act</a>, by or on behalf of a <a href="#party">party</a>, that results in the selection of either.</dd>
  - a single <a href="#partial-identity">partial identity</a> that the party <a href="#owner">owns</a>, given some (observed or received) data, or
  - a single <a href="#entity">entity</a> from a given set of entities that is the <a href="#subject">subject</a> of a specified <a href="#partial-identity">partial identity</a> that the party <a href="#owner">owns</a>.
 
- <dt id="identity"><a href="https://essif-lab.github.io/framework/docs/terms/identity">Identity</a> <span class="tag">#essiflab</span></dt>
+ <dt id="identity"><svg class="_slf" onclick="copyUrl('#identity')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/identity">Identity</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the combined <a href="#knowledge">knowledge</a> about that <a href="#entity">entity</a> of all <a href="#party">parties</a>, i.e. the union of all <a href="#partial-identity">partial identities</a> of which a specific <a href="#entity">entity</a> is the <a href="#subject">subject</a>.</dd>
 
- <dt id="issuer"><a href="https://essif-lab.github.io/framework/docs/terms/issuer">Issuer</a> <span class="tag">#essiflab</span></dt>
+ <dt id="issuer"><svg class="_slf" onclick="copyUrl('#issuer')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/issuer">Issuer</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the capability to construct <a href="#credential">credentials</a> from data objects, according to the content of its <a href="#principal">principal</a>'s <a href="#issuer">issuer</a>-Policy (specifically regarding the way in which the <a href="#credential">credential</a> is to be digitally signed), and pass it to the <a href="#wallet">wallet</a>-component of its <a href="#principal">principal</a> allowing it to be issued.</dd>
 
- <dt id="isuer-policy"><a href="https://essif-lab.github.io/framework/docs/terms/isuer-policy">Isuer Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="isuer-policy"><svg class="_slf" onclick="copyUrl('#isuer-policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/isuer-policy">Isuer Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#digital-policy">digital policy</a> that enables an operational <a href="#issuer">issuer</a> component to function in accordance with the <a href="#objective">objectives</a> of its <a href="#principal">principal</a>.</dd>
 
  <dt id="J" class="letter">J</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="jurisdiction"><a href="https://essif-lab.github.io/framework/docs/terms/jurisdiction">Jurisdiction</a> <span class="tag">#essiflab</span></dt>
+ <dt id="jurisdiction"><svg class="_slf" onclick="copyUrl('#jurisdiction')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/jurisdiction">Jurisdiction</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the composition of a <a href="#legal-system">legal system</a> (legislation, enforcement thereof, and conflict resolution), a <a href="#party">party</a> that governs that <a href="#legal-system">legal system</a>, a scope within which that <a href="#legal-system">legal system</a> is operational, and one or more <a href="#objective">objectives</a> for the purpose of which the <a href="#legal-system">legal system</a> is operated. See also the <a href="#pattern-jurisdiction">Jurisdictions pattern</a>.</dd>
 
  <dt id="K" class="letter">K</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="knowledge"><a href="https://essif-lab.github.io/framework/docs/terms/knowledge">Knowledge</a> <span class="tag">#essiflab</span></dt>
+ <dt id="knowledge"><svg class="_slf" onclick="copyUrl('#knowledge')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/knowledge">Knowledge</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>The (intangible) sum of what is known by a specific <a href="#party">party</a>, as well as the familiarity, awareness or understanding of someone or something by that <a href="#party">party</a>.</dd>
 
  <dt id="L" class="letter">L</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="legal-entity"><a href="https://essif-lab.github.io/framework/docs/terms/legal-entity">Legal Entity</a> <span class="tag">#essiflab</span></dt>
+ <dt id="legal-entity"><svg class="_slf" onclick="copyUrl('#legal-entity')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/legal-entity">Legal Entity</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#entity">entity</a> that is known by, recognized to exist, and registered in that <a href="#jurisdiction">jurisdiction</a>.</dd>
 
- <dt id="legal-jurisdiction"><a href="https://essif-lab.github.io/framework/docs/terms/legal-jurisdiction">Legal Jurisdiction</a> <span class="tag">#essiflab</span></dt>
+ <dt id="legal-jurisdiction"><svg class="_slf" onclick="copyUrl('#legal-jurisdiction')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/legal-jurisdiction">Legal Jurisdiction</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#jurisdiction">jurisdiction</a> that is governed/operated by a governmental body.</dd>
 
- <dt id="legal-system"><a href="https://essif-lab.github.io/framework/docs/terms/legal-system">Legal System</a> <span class="tag">#essiflab</span></dt>
+ <dt id="legal-system"><svg class="_slf" onclick="copyUrl('#legal-system')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/legal-system">Legal System</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a system in which rules are defined, and mechanisms for their enforcement and conflict resolution are (implicitly or explicitly) specified.</dd>
 
  <dt id="M" class="letter">M</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="management"><a href="https://essif-lab.github.io/framework/docs/terms/management">Management</a> <span class="tag">#essiflab</span></dt>
+ <dt id="management"><svg class="_slf" onclick="copyUrl('#management')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/management">Management</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the <a href="#action">act</a> or process of managing or actually realizing of (the results associated with) a set of <a href="#objective">objectives</a> by the <a href="#owner">owner</a> of these <a href="#objective">objectives</a>.</dd>
 
- <dt id="mental-model"><a href="https://essif-lab.github.io/framework/docs/terms/mental-model">Mental Model</a> <span class="tag">#essiflab</span></dt>
+ <dt id="mental-model"><svg class="_slf" onclick="copyUrl('#mental-model')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/mental-model">Mental Model</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>A description, both casual and formal, of a set of <a href="#concept">concepts</a> (ideas), relations between them, and constraints, that together form a coherent and consistent 'viewpoint', or 'way of thinking' about a certain topic.</dd>
 
  <dt id="O" class="letter">O</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="objective"><a href="https://essif-lab.github.io/framework/docs/terms/objective">Objective</a> <span class="tag">#essiflab</span></dt>
+ <dt id="objective"><svg class="_slf" onclick="copyUrl('#objective')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/objective">Objective</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>Something toward which a <a href="#party">party</a> (its <a href="#owner">owner</a>) directs effort (an aim, goal, or end of action).</dd>
 
- <dt id="organization"><a href="https://essif-lab.github.io/framework/docs/terms/organization">Organization</a> <span class="tag">#essiflab</span></dt>
+ <dt id="organization"><svg class="_slf" onclick="copyUrl('#organization')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/organization">Organization</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#party">party</a>, part of which is a group of <a href="#actor">actors</a> that work to realize its <a href="#objective">objectives</a>.</dd>
 
- <dt id="owned"><a href="https://essif-lab.github.io/framework/docs/terms/owned">Owned</a> <span class="tag">#essiflab</span></dt>
+ <dt id="owned"><svg class="_slf" onclick="copyUrl('#owned')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/owned">Owned</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#entity">entity</a> over which another <a href="#entity">entity</a> (its <a href="#owner">owner</a>) has the power (duty, right) to enjoy it, dispose of it and control it; that power is limited to (the scope of) that <a href="#jurisdiction">jurisdiction</a>, and by its rules.</dd>
 
- <dt id="owner"><a href="https://essif-lab.github.io/framework/docs/terms/owner">Owner</a> <span class="tag">#essiflab</span></dt>
+ <dt id="owner"><svg class="_slf" onclick="copyUrl('#owner')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/owner">Owner</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the role that a <a href="#party">party</a> performs when it is exercizing its legal, rightful or natural title to control that <a href="#entity">entity</a>.</dd>
 
- <dt id="ownership"><a href="https://essif-lab.github.io/framework/docs/terms/ownership">Ownership</a> <span class="tag">#essiflab</span></dt>
+ <dt id="ownership"><svg class="_slf" onclick="copyUrl('#ownership')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/ownership">Ownership</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the rights and duties, as defined and enforced in that <a href="#jurisdiction">jurisdiction</a>, of that <a href="#entity">entity</a> to enjoy, dispose of, and control the other <a href="#entity">entity</a>.</dd>
 
  <dt id="P" class="letter">P</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="partial-identity"><a href="https://essif-lab.github.io/framework/docs/terms/partial-identity">Partial identity</a> <span class="tag">#essiflab</span></dt>
+ <dt id="partial-identity"><svg class="_slf" onclick="copyUrl('#partial-identity')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/partial-identity">Partial identity</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>all <a href="#knowledge">knowledge</a> that a specific <a href="#party">party</a> (= the <a href="#owner">owner</a> of the partial identity) has about that <a href="#entity">entity</a> (= the '<a href="#subject">subject</a>' of the partial identity).</dd>
 
- <dt id="participant"><a href="https://essif-lab.github.io/framework/docs/terms/participant">Participant</a> <span class="tag">#essiflab</span></dt>
+ <dt id="participant"><svg class="_slf" onclick="copyUrl('#participant')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/participant">Participant</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#party">party</a> is negotiating (or has negotiated) a <a href="#transaction-agreement">business transaction agreement</a>.</dd>
 
- <dt id="party"><a href="https://essif-lab.github.io/framework/docs/terms/party">Party</a> <span class="tag">#essiflab</span></dt>
+ <dt id="party"><svg class="_slf" onclick="copyUrl('#party')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/party">Party</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#entity">entity</a> that sets its <a href="#objective">objectives</a>, maintains its <a href="#knowledge">knowledge</a>, and uses that <a href="#knowledge">knowledge</a> to pursue its <a href="#objective">objectives</a> in an autonomous (sovereign) manner. Humans and <a href="#organization">organizations</a> are the typical examples.</dd>
 
- <dt id="pattern"><a href="https://essif-lab.github.io/framework/docs/terms/pattern">Pattern</a> <span class="tag">#essiflab</span></dt>
+ <dt id="pattern"><svg class="_slf" onclick="copyUrl('#pattern')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/pattern">Pattern</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>A description, both casual and formal, of a set of <a href="#concept">concepts</a> (ideas), relations between them, and constraints, that together form a coherent and consistent 'viewpoint', or 'way of thinking' about a certain topic.</dd>
 
- <dt id="pattern-file"><a href="https://essif-lab.github.io/framework/docs/terms/pattern-file">Pattern-file</a> <span class="tag">#essiflab</span></dt>
+ <dt id="pattern-file"><svg class="_slf" onclick="copyUrl('#pattern-file')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/pattern-file">Pattern-file</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a file whose contents describes/documents a <a href="#pattern">pattern</a>.</dd>
 
- <dt id="peer-actor"><a href="https://essif-lab.github.io/framework/docs/terms/peer-actor">Peer Actor</a> <span class="tag">#essiflab</span></dt>
+ <dt id="peer-actor"><svg class="_slf" onclick="copyUrl('#peer-actor')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/peer-actor">Peer Actor</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the <a href="#actor">actor</a> with whom/which this other <a href="#actor">actor</a> is communicating in that <a href="#communication-session">communication session</a>.</dd>
 
- <dt id="peer-agent"><a href="https://essif-lab.github.io/framework/docs/terms/peer-agent">Peer Agent</a> <span class="tag">#essiflab</span></dt>
+ <dt id="peer-agent"><svg class="_slf" onclick="copyUrl('#peer-agent')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/peer-agent">Peer Agent</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the <a href="#agent">agent</a> with whom/which this other <a href="#agent">agent</a> is communicating in that <a href="#communication-session">communication session</a>.</dd>
 
- <dt id="peer-party"><a href="https://essif-lab.github.io/framework/docs/terms/peer-party">Peer Party</a> <span class="tag">#essiflab</span></dt>
+ <dt id="peer-party"><svg class="_slf" onclick="copyUrl('#peer-party')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/peer-party">Peer Party</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#party">party</a> that also participates in that <a href="#transaction">business transaction</a>.</dd>
 
- <dt id="policy"><a href="https://essif-lab.github.io/framework/docs/terms/policy">Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="policy"><svg class="_slf" onclick="copyUrl('#policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/policy">Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a (set of) rules, working-instructions, preferences and other guidance for the execution of one or more kinds of <a href="#action">actions</a>, that <a href="#agent">agents</a> of the <a href="#party">party</a> that <a href="#governance">governs</a> the policy have access to and can interpret such that this results in these <a href="#action">actions</a> being executed as intended by that <a href="#party">party</a>.</dd>
 
- <dt id="presentation"><a href="https://essif-lab.github.io/framework/docs/terms/presentation">Presentation</a> <span class="tag">#essiflab</span></dt>
+ <dt id="presentation"><svg class="_slf" onclick="copyUrl('#presentation')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/presentation">Presentation</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a (signed) digital message that a <a href="#holder">holder</a> component may send to a <a href="#verifier">verifier</a> component that contains data derived from one or more <a href="#verify">verifiable</a> <a href="#credential">credentials</a> (that (a <a href="#colleague">colleague</a> component of) the <a href="#holder">holder</a> component has received from <a href="#issuer">issuer</a> components of one or more <a href="#party">parties</a>), as a response to a specific <a href="#presentation-request">presentation request</a> of a <a href="#verifier">Verifier</a> component.</dd>
 
- <dt id="presentation-request"><a href="https://essif-lab.github.io/framework/docs/terms/presentation-request">Presentation Request</a> <span class="tag">#essiflab</span></dt>
+ <dt id="presentation-request"><svg class="_slf" onclick="copyUrl('#presentation-request')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/presentation-request">Presentation Request</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a (signed) digital message that a <a href="#verifier">verifier</a> component sends to a <a href="#holder">holder</a> component asking for specific data from one or more <a href="#verify">verifiable</a> <a href="#credential">credentials</a> that are issued by specific Parties.</dd>
 
- <dt id="principal"><a href="https://essif-lab.github.io/framework/docs/terms/principal">Principal</a> <span class="tag">#essiflab</span></dt>
+ <dt id="principal"><svg class="_slf" onclick="copyUrl('#principal')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/principal">Principal</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the <a href="#party">party</a> for whom, or on behalf of whom, the <a href="#actor">actor</a> is executing an <a href="#action">action</a> (this <a href="#actor">actor</a> is then called an <a href="#agent">agent</a> of that <a href="#party">party</a>).</dd>
 
  <dt id="Q" class="letter">Q</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="qualified-data"><a href="https://essif-lab.github.io/framework/docs/terms/qualified-data">Qualified Data</a> <span class="tag">#essiflab</span></dt>
+ <dt id="qualified-data"><svg class="_slf" onclick="copyUrl('#qualified-data')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/qualified-data">Qualified Data</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd><a href="#data">data</a> that comes with assurances, at least regarding its provenance and integrity (immutability), that make this data valid to be used for specific purposes of individual <a href="#party">parties</a>.</dd>
 
  <dt id="R" class="letter">R</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="risk"><a href="https://essif-lab.github.io/framework/docs/terms/risk">Risk</a> <span class="tag">#essiflab</span></dt>
+ <dt id="risk"><svg class="_slf" onclick="copyUrl('#risk')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/risk">Risk</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the effects that uncertainty (i.e. a lack of information, understanding or <a href="#knowledge">knowledge</a> of events, their consequences or likelihoods) can have on the intended realization of an <a href="#objective">objective</a> of a <a href="#party">party</a>.</dd>
 
- <dt id="risk-level"><a href="https://essif-lab.github.io/framework/docs/terms/risk-level">Risk level</a> <span class="tag">#essiflab</span></dt>
+ <dt id="risk-level"><svg class="_slf" onclick="copyUrl('#risk-level')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/risk-level">Risk level</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a measure for the deviation of the intended realization (results) of a specific <a href="#objective">objective</a> that its <a href="#owner">owner</a> uses to represent the priority with which the <a href="#risk">risk</a> of that <a href="#objective">objective</a> should be reckoned with.</dd>
 
- <dt id="risk-management"><a href="#Risk management">Risk management (Centralized, Decentralized or Networked)</a> <span class="tag">#essiflab</span></dt>
+ <dt id="risk-management"><svg class="_slf" onclick="copyUrl('#risk-management')"><use href="#_slf"/></svg><a href="#Risk management">Risk management (Centralized, Decentralized or Networked)</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a process that is run by (or on behalf of) a specific <a href="#party">party</a> for the purpose of managing the <a href="#risk">risks</a> that it <a href="#owner">owns</a>.</dd>
 
- <dt id="risk-owner"><a href="https://essif-lab.github.io/framework/docs/terms/risk-owner">Risk Owner</a> <span class="tag">#essiflab</span></dt>
+ <dt id="risk-owner"><svg class="_slf" onclick="copyUrl('#risk-owner')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/risk-owner">Risk Owner</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the <a href="#party">party</a> that is the <a href="#owner">owner</a> of the <a href="#objective">objective</a> to which a <a href="#risk">risk</a> is associated.</dd>
 
- <dt id="role"><a href="https://essif-lab.github.io/framework/docs/terms/role">Role</a> <span class="tag">#essiflab</span></dt>
+ <dt id="role"><svg class="_slf" onclick="copyUrl('#role')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/role">Role</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a set of characteristics that the entity has, <a href="#action">actions</a> (behaviours) that it may execute, or pieces of <a href="#knowledge">knowledge</a> that it is expected to have in that context, that are referenced to by a specific <a href="#role-name">role name</a>.</dd>
 
- <dt id="role-name"><a href="https://essif-lab.github.io/framework/docs/terms/role-name">Role name</a> <span class="tag">#essiflab</span></dt>
+ <dt id="role-name"><svg class="_slf" onclick="copyUrl('#role-name')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/role-name">Role name</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>name (text) that refers to (and identifies) a <a href="#role">role</a> in a specific context.</dd>
 
  <dt id="S" class="letter">S</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="scope"><a href="https://essif-lab.github.io/framework/docs/terms/scope">Scope</a> <span class="tag">#essiflab</span></dt>
+ <dt id="scope"><svg class="_slf" onclick="copyUrl('#scope')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/scope">Scope</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the extent of the area or subject matter (which we use to define <a href="#pattern">patterns</a>, <a href="#concept">concepts</a>, <a href="#term">terms</a> and <a href="#glossary">glossaries</a> in).</dd>
 
- <dt id="scope-of-control"><a href="https://essif-lab.github.io/framework/docs/terms/scope-of-control">Scope of Control</a> <span class="tag">#essiflab</span></dt>
+ <dt id="scope-of-control"><svg class="_slf" onclick="copyUrl('#scope-of-control')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/scope-of-control">Scope of Control</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the extent of the area or subject matter that a <a href="#party">party</a> controls.</dd>
 
- <dt id="scope-file"><a href="https://essif-lab.github.io/framework/docs/terms/scope-file">Scope-file</a> <span class="tag">#essiflab</span></dt>
+ <dt id="scope-file"><svg class="_slf" onclick="copyUrl('#scope-file')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/scope-file">Scope-file</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a file whose contents defines/specifies a <a href="#scope">scope</a>.</dd>
 
- <dt id="scoped-term"><a href="https://essif-lab.github.io/framework/docs/terms/scoped-term">Scoped Term</a> <span class="tag">#essiflab</span></dt>
+ <dt id="scoped-term"><svg class="_slf" onclick="copyUrl('#scoped-term')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/scoped-term">Scoped Term</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#term">term</a>, the meaning of which is determined by the <a href="#definition">definition</a> to which it refers in a specific <a href="#scope">scope</a>/context.</dd>
 
- <dt id="self-sovereign-identity"><a href="https://essif-lab.github.io/framework/docs/terms/ssi">Self-Sovereign Identity</a> <span class="tag">#essiflab</span></dt>
+ <dt id="self-sovereign-identity"><svg class="_slf" onclick="copyUrl('#self-sovereign-identity')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/ssi">Self-Sovereign Identity</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>Self-Sovereign Identity (SSI) is a term that has many different interpretations, and that we use to refer to concepts/ideas, architectures, processes and technologies that aim to support (autonomous) <a href="#party">parties</a> as they negotiate and execute electronic <a href="#transaction">transactions</a> with one another.</dd>
 
- <dt id="self-sovereignty"><a href="https://essif-lab.github.io/framework/docs/terms/self-sovereignty">Self-Sovereignty</a> <span class="tag">#essiflab</span></dt>
+ <dt id="self-sovereignty"><svg class="_slf" onclick="copyUrl('#self-sovereignty')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/self-sovereignty">Self-Sovereignty</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the characteristic of every <a href="#party">party</a> that it is autonomous in managing and operating its <a href="#owner">own</a> <a href="#knowledge">knowledge</a>, particularly in making decisions and deciding how to decide.</dd>
 
- <dt id="semantics"><a href="https://essif-lab.github.io/framework/docs/terms/semantics">Semantics</a> <span class="tag">#essiflab</span></dt>
+ <dt id="semantics"><svg class="_slf" onclick="copyUrl('#semantics')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/semantics">Semantics</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a mapping between the (tangible/textual) <a href="#term">terms</a> and (intangible) ideas/<a href="#concept">concepts</a> - their meaning.</dd>
 
- <dt id="ssi"><a href="https://essif-lab.github.io/framework/docs/terms/ssi">SSI (Self-Sovereign Identity)</a> <span class="tag">#essiflab</span></dt>
+ <dt id="ssi"><svg class="_slf" onclick="copyUrl('#ssi')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/ssi">SSI (Self-Sovereign Identity)</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>SSI (Self-Sovereign Identity) is a term that has many different interpretations, and that we use to refer to concepts/ideas, architectures, processes and technologies that aim to support (autonomous) <a href="#party">parties</a> as they negotiate and execute electronic <a href="#transaction">transactions</a> with one another.</dd>
 
- <dt id="ssi-agent"><a href="https://essif-lab.github.io/framework/docs/terms/ssi-agent">SSI Agent</a> <span class="tag">#essiflab</span></dt>
+ <dt id="ssi-agent"><svg class="_slf" onclick="copyUrl('#ssi-agent')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/ssi-agent">SSI Agent</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#digital-agent">digital agent</a> that provides one or more of the <a href="#ssi-agent">ssi functionalities</a> (<a href="#issuer">issuer</a>, <a href="#holder">holder</a>, <a href="#verifier">verifier</a>, <a href="#wallet">wallet</a>) to its <a href="#principal">principal</a>.</dd>
 
- <dt id="ssi-assurance-community"><a href="https://essif-lab.github.io/framework/docs/terms/ssi-assurance-community">SSI Assurance Community (SSI-AC)</a> <span class="tag">#essiflab</span></dt>
+ <dt id="ssi-assurance-community"><svg class="_slf" onclick="copyUrl('#ssi-assurance-community')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/ssi-assurance-community">SSI Assurance Community (SSI-AC)</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#community">community</a> that supports its members as they seek to increase their confidence in the <a href="#ssi-infrastructure">SSI infrastructure</a> and/or (specific) <a href="#qualified-data">qualifications</a> of the data exchanged through that infrastructure.</dd>
 
- <dt id="ssi-infrastructure"><a href="https://essif-lab.github.io/framework/docs/terms/ssi-infrastructure">SSI Infrastructure</a> <span class="tag">#essiflab</span></dt>
+ <dt id="ssi-infrastructure"><svg class="_slf" onclick="copyUrl('#ssi-infrastructure')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/ssi-infrastructure">SSI Infrastructure</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the technological components that are (envisaged to be) all over the world for the purpose of providing, requesting and obtaining <a href="#qualified-data">qualified data</a>, for the purpose of negotiating and/or executing electronic <a href="#transaction">transactions</a>.</dd>
 
- <dt id="subject"><a href="https://essif-lab.github.io/framework/docs/terms/subject">Subject</a> <span class="tag">#essiflab</span></dt>
+ <dt id="subject"><svg class="_slf" onclick="copyUrl('#subject')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/subject">Subject</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the (single) <a href="#entity">entity</a> to which a given set of coherent data relates/pertains. Examples of such sets include attributes, <a href="#assertion">Claims/Assertions</a>, files/dossiers, <a href="#credential">(verifiable) credentials</a>, <a href="#partial-identity">(partial) identities</a>, etc.</dd>
 
  <dt id="T" class="letter">T</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="tag"><a href="https://essif-lab.github.io/framework/docs/terms/tag">Tag</a> <span class="tag">#essiflab</span></dt>
+ <dt id="tag"><svg class="_slf" onclick="copyUrl('#tag')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/tag">Tag</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an alphanumeric string that is used to identify <a href="#scope">scopes</a> and/or group <a href="#term">terms</a>, and that satisfies the regex `#[a-z-0-9]+`.</dd>
 
- <dt id="term"><a href="https://essif-lab.github.io/framework/docs/terms/term">Term</a> <span class="tag">#essiflab</span></dt>
+ <dt id="term"><svg class="_slf" onclick="copyUrl('#term')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/term">Term</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a word or phrase that is used in at least one <a href="#scope">scope</a>/context to represent a specific <a href="#concept">concept</a> (and referring to its <a href="#definition">definition</a>). Note the difference with <a href="#scoped-term">scoped terms</a></dd>
 
- <dt id="term-file"><a href="https://essif-lab.github.io/framework/docs/terms/term-file">Term-file</a> <span class="tag">#essiflab</span></dt>
+ <dt id="term-file"><svg class="_slf" onclick="copyUrl('#term-file')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/term-file">Term-file</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a file whose contents defines/specifies a <a href="#term">term</a>.</dd>
 
- <dt id="terminology"><a href="https://essif-lab.github.io/framework/docs/terms/terminology">Terminology</a> <span class="tag">#essiflab</span></dt>
+ <dt id="terminology"><svg class="_slf" onclick="copyUrl('#terminology')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/terminology">Terminology</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the set of <a href="#term">terms</a> that are used within a single <a href="#scope">scope</a> to refer to a single <a href="#definition">definition</a>, enabling <a href="#party">parties</a> to reason and communicate ideas they have about one or more specific topics.</dd>
 
- <dt id="terminology-process"><a href="https://essif-lab.github.io/framework/docs/terms/terminology-process">Terminology Process</a> <span class="tag">#essiflab</span></dt>
+ <dt id="terminology-process"><svg class="_slf" onclick="copyUrl('#terminology-process')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/terminology-process">Terminology Process</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a method for recognizing misunderstandings as such, and creating or maintaining <a href="#definition">definitions</a> that resolve them.</dd>
 
- <dt id="terms-community"><a href="https://essif-lab.github.io/framework/docs/terms/terms-community">Terms Community</a> <span class="tag">#essiflab</span></dt>
+ <dt id="terms-community"><svg class="_slf" onclick="copyUrl('#terms-community')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/terms-community">Terms Community</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#community">community</a> that maintains a <a href="#terminology">terminology</a> for the purpose of avoiding misunderstandings between its members as they collaborate.</dd>
 
- <dt id="transaction"><a href="https://essif-lab.github.io/framework/docs/terms/transaction">Transaction</a> <span class="tag">#essiflab</span></dt>
+ <dt id="transaction"><svg class="_slf" onclick="copyUrl('#transaction')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/transaction">Transaction</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the exchange of goods, services, funds, or data between some <a href="#party">parties</a> (called <a href="#participant">participants</a> of the <a href="#transaction">transaction</a>).</dd>
 
- <dt id="transaction-agreement"><a href="https://essif-lab.github.io/framework/docs/terms/transaction-agreement">Transaction Agreement</a> <span class="tag">#essiflab</span></dt>
+ <dt id="transaction-agreement"><svg class="_slf" onclick="copyUrl('#transaction-agreement')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/transaction-agreement">Transaction Agreement</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the set of rules that specify the rights (expectations) and duties (obligations) of <a href="#participant">participants</a> towards one another in the context of a specific <a href="#transaction">business transaction</a>.</dd>
 
- <dt id="transaction-data-collector"><a href="https://essif-lab.github.io/framework/docs/terms/transaction-data-collector">Transaction Data Collector</a> <span class="tag">#essiflab</span></dt>
+ <dt id="transaction-data-collector"><svg class="_slf" onclick="copyUrl('#transaction-data-collector')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/transaction-data-collector">Transaction Data Collector</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a functional component that collects sufficient and <a href="#validate">validated</a> data for deciding whether or not a request (typically for a product or a service) is to be serviced.</dd>
 
- <dt id="transaction-data-collector-policy"><a href="https://essif-lab.github.io/framework/docs/terms/transaction-data-collector-policy">Transaction Data Collector Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="transaction-data-collector-policy"><svg class="_slf" onclick="copyUrl('#transaction-data-collector-policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/transaction-data-collector-policy">Transaction Data Collector Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#digital-policy">digital policy</a> that enables an operational <a href="#transaction-data-collector">transaction data collector</a> component to function in accordance with the <a href="#objective">objectives</a> of its <a href="#principal">principal</a>.</dd>
 
- <dt id="transaction-data-discloser"><a href="https://essif-lab.github.io/framework/docs/terms/transaction-data-discloser">Transaction Data Discloser</a> <span class="tag">#essiflab</span></dt>
+ <dt id="transaction-data-discloser"><svg class="_slf" onclick="copyUrl('#transaction-data-discloser')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/transaction-data-discloser">Transaction Data Discloser</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a functional component that is capable of disclosing data.</dd>
 
- <dt id="transaction-data-discloser-policy"><a href="https://essif-lab.github.io/framework/docs/terms/transaction-data-discloser-policy">Transaction Data Discloser Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="transaction-data-discloser-policy"><svg class="_slf" onclick="copyUrl('#transaction-data-discloser-policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/transaction-data-discloser-policy">Transaction Data Discloser Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#digital-policy">digital policy</a> that enables an operational <a href="#transaction-data-discloser">transaction data discloser</a> component to function in accordance with the <a href="#objective">objectives</a> of its <a href="#principal">principal</a>.</dd>
 
- <dt id="transaction-form"><a href="https://essif-lab.github.io/framework/docs/terms/transaction-form">Transaction Form</a> <span class="tag">#essiflab</span></dt>
+ <dt id="transaction-form"><svg class="_slf" onclick="copyUrl('#transaction-form')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/transaction-form">Transaction Form</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the specification of the set of data that this <a href="#party">party</a> needs to (a) commit to a (proposed) <a href="#transaction">business transaction</a> of that kind, (b) fulfill its duties/obligations and (c) escalate if necessary.</dd>
 
- <dt id="transaction-id"><a href="https://essif-lab.github.io/framework/docs/terms/transaction-id">Transaction Id</a> <span class="tag">#essiflab</span></dt>
+ <dt id="transaction-id"><svg class="_slf" onclick="copyUrl('#transaction-id')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/transaction-id">Transaction Id</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>character string that this <a href="#participant">participant</a> uses to identify, and refer to, that <a href="#transaction">business transaction</a>.</dd>
 
- <dt id="transaction-proposal"><a href="https://essif-lab.github.io/framework/docs/terms/transaction-proposal">Transaction Proposal</a> <span class="tag">#essiflab</span></dt>
+ <dt id="transaction-proposal"><svg class="_slf" onclick="copyUrl('#transaction-proposal')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/transaction-proposal">Transaction Proposal</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#transaction-agreement">transaction agreement</a> that is 'in-the-making' (ranging from an empty document to a document that would be a <a href="#transaction-agreement">transaction agreement</a> if it were signed by all <a href="#participant">participants</a>).</dd>
 
- <dt id="transaction-request"><a href="https://essif-lab.github.io/framework/docs/terms/transaction-request">Transaction Request</a> <span class="tag">#essiflab</span></dt>
+ <dt id="transaction-request"><svg class="_slf" onclick="copyUrl('#transaction-request')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/transaction-request">Transaction Request</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a message, send by a requesting <a href="#party">party</a> to a providing <a href="#party">party</a>, that initiates the negotiation of a new <a href="#transaction-agreement">transaction agreement</a> between these <a href="#party">parties</a> for the provisioning of a specific product or service.</dd>
 
- <dt id="trust"><a href="https://essif-lab.github.io/framework/docs/terms/trust">Trust</a> <span class="tag">#essiflab</span></dt>
+ <dt id="trust"><svg class="_slf" onclick="copyUrl('#trust')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/trust">Trust</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the (subjective) degree of belief or confidence that a <a href="#party">party</a> has in X (someone, something, ...).</dd>
 
  <dt id="V" class="letter">V</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="validate"><a href="https://essif-lab.github.io/framework/docs/terms/validate">Validate</a> <span class="tag">#essiflab</span></dt>
+ <dt id="validate"><svg class="_slf" onclick="copyUrl('#validate')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/validate">Validate</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the act, by or on behalf of a <a href="#party">party</a>, of determining whether or not that data is valid to be used for some specific purpose(s) of that <a href="#party">party</a>.</dd>
 
- <dt id="validation-policy"><a href="https://essif-lab.github.io/framework/docs/terms/validation-policy">Validation Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="validation-policy"><svg class="_slf" onclick="copyUrl('#validation-policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/validation-policy">Validation Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#digital-policy">digital policy</a> that contains the rules, working-instructions, preferences and other guidance for determining whether or not data is valid for a specific purpose/objective of its <a href="#governance">governor</a>.</dd>
 
- <dt id="validator"><a href="https://essif-lab.github.io/framework/docs/terms/validator">Validator</a> <span class="tag">#essiflab</span></dt>
+ <dt id="validator"><svg class="_slf" onclick="copyUrl('#validator')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/validator">Validator</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the capability to determine whether or not (<a href="#verify">verified</a>) data is valid to be used for some specific purpose(s).</dd>
 
- <dt id="verifier"><a href="https://essif-lab.github.io/framework/docs/terms/verifier">Verifier</a> <span class="tag">#essiflab</span></dt>
+ <dt id="verifier"><svg class="_slf" onclick="copyUrl('#verifier')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/verifier">Verifier</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the capability to request <a href="#peer-agent">peer agents</a> to present (provide) data from credentials (of a specified kind, issued by specified <a href="#party">parties</a>), and to verify such responses (check structure, signatures, dates), according to its <a href="#principal">principal</a>'s <a href="#verifier-policy">verifier policy</a>.</dd>
 
- <dt id="verifier-policy"><a href="https://essif-lab.github.io/framework/docs/terms/verifier-policy">Verifier Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="verifier-policy"><svg class="_slf" onclick="copyUrl('#verifier-policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/verifier-policy">Verifier Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#digital-policy">digital policy</a> that enables an operational <a href="#verifier">verifier</a> component to function in accordance with the <a href="#objective">objectives</a> of its <a href="#principal">principal</a>.</dd>
 
- <dt id="verify"><a href="https://essif-lab.github.io/framework/docs/terms/verify">Verify</a> <span class="tag">#essiflab</span></dt>
+ <dt id="verify"><svg class="_slf" onclick="copyUrl('#verify')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/verify">Verify</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the act, by or on behalf of a Party, of determining whether that data is authentic (i.e. originates from the <a href="#party">party</a> that authored it), timely (i.e. has not expired), and conforms to other specifications that apply to its structure.</dd>
 
- <dt id="vocabulary"><a href="https://essif-lab.github.io/framework/docs/terms/vocabulary">Vocabulary</a> <span class="tag">#essiflab</span></dt>
+ <dt id="vocabulary"><svg class="_slf" onclick="copyUrl('#vocabulary')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/vocabulary">Vocabulary</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the sum or stock of words employed by a language, group, individual, or work or in a field of knowledge.</dd>
 
  <dt id="W" class="letter">W</dt>
  <nav>[ <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a> F <a href="#G">G</a> <a href="#H">H</a> <a href="#I">I</a> <a href="#J">J</a> <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a> N <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a> <a href="#S">S</a> <a href="#T">T</a> U <a href="#V">V</a> <a href="#W">W</a> X Y Z ]</nav>
 
- <dt id="wallet"><a href="https://essif-lab.github.io/framework/docs/terms/wallet">Wallet</a> <span class="tag">#essiflab</span></dt>
+ <dt id="wallet"><svg class="_slf" onclick="copyUrl('#wallet')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/wallet">Wallet</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the capability to securely store data as requested by <a href="#digital-colleague">colleague agents</a>, and to provide stored data to <a href="#digital-colleague">colleague agents</a> or <a href="#peer-agent">peer agents</a>, all in compliance with the rules of its <a href="#principal">principal</a>'s <a href="#wallet-policy">wallet policy</a>.</dd>
 
- <dt id="wallet-policy"><a href="https://essif-lab.github.io/framework/docs/terms/wallet-policy">Wallet Policy</a> <span class="tag">#essiflab</span></dt>
+ <dt id="wallet-policy"><svg class="_slf" onclick="copyUrl('#wallet-policy')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/wallet-policy">Wallet Policy</a> <svg class="_xl" onclick="goto('https://trustoverip.github.io/essiflab/glossary#action')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>a <a href="#digital-policy">digital policy</a> that enables an operational <a href="#wallet">wallet</a> component to function in accordance with the <a href="#objective">objectives</a> of its <a href="#principal">principal</a>.</dd>
 
  </dl>
