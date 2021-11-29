@@ -221,7 +221,7 @@
  <dd>something that is actually done/executed - by a single <a href="#actor">actor</a> (on behalf of a given <a href="#party">party</a>), as a single operation in a specific context.</dd>
 
  <dt id="actor"><svg class="_slf" onclick="copyUrl('#actor')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/actor">Actor</a> <svg class="_xl" onclick="goto('https://github.com/essif-lab/framework/tree/master/docs/terms/action.md')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
- <dd>Entity that can act (do things), e.g. people, machines, but not <a href="#organization">organizations</a>.</dd>
+ <dd><a href="#entity">entity</a> that can act (do things), e.g. people, machines, but not <a href="#organization">organizations</a>.</dd>
 
  <dt id="agent"><svg class="_slf" onclick="copyUrl('#agent')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/agent">Agent</a> <svg class="_xl" onclick="goto('https://github.com/essif-lab/framework/tree/master/docs/terms/action.md')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#actor">actor</a> that is executing an <a href="#action">action</a> on behalf of a <a href="#party">party</a> (called the <a href="#principal">principal</a> of that <a href="#actor">actor</a>).</dd>
@@ -387,8 +387,8 @@
 
  <dt id="identify"><svg class="_slf" onclick="copyUrl('#identify')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/identify">Identify</a> <svg class="_xl" onclick="goto('https://github.com/essif-lab/framework/tree/master/docs/terms/action.md')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>an <a href="#action">act</a>, by or on behalf of a <a href="#party">party</a>, that results in the selection of either.</dd>
- - a single <a href="#partial-identity">partial identity</a> that the party <a href="#owner">owns</a>, given some (observed or received) data, or
- - a single <a href="#entity">entity</a> from a given set of entities that is the <a href="#subject">subject</a> of a specified <a href="#partial-identity">partial identity</a> that the party <a href="#owner">owns</a>.
+ - a single <a href="#partial-identity">partial identity</a> that the <a href="#party">party</a> <a href="#owner">owns</a>, given some (observed or received) data, or
+ - a single <a href="#entity">entity</a> from a given set of <a href="#entity">entities</a> that is the <a href="#subject">subject</a> of a specified <a href="#partial-identity">partial identity</a> that the <a href="#party">party</a> <a href="#owner">owns</a>.
 
  <dt id="identity"><svg class="_slf" onclick="copyUrl('#identity')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/identity">Identity</a> <svg class="_xl" onclick="goto('https://github.com/essif-lab/framework/tree/master/docs/terms/action.md')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the combined <a href="#knowledge">knowledge</a> about that <a href="#entity">entity</a> of all <a href="#party">parties</a>, i.e. the union of all <a href="#partial-identity">partial identities</a> of which a specific <a href="#entity">entity</a> is the <a href="#subject">subject</a>.</dd>
@@ -484,7 +484,7 @@
  <dd>a (signed) digital message that a <a href="#holder">holder</a> component may send to a <a href="#verifier">verifier</a> component that contains data derived from one or more <a href="#verify">verifiable</a> <a href="#credential">credentials</a> (that (a <a href="#colleague">colleague</a> component of) the <a href="#holder">holder</a> component has received from <a href="#issuer">issuer</a> components of one or more <a href="#party">parties</a>), as a response to a specific <a href="#presentation-request">presentation request</a> of a <a href="#verifier">Verifier</a> component.</dd>
 
  <dt id="presentation-request"><svg class="_slf" onclick="copyUrl('#presentation-request')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/presentation-request">Presentation Request</a> <svg class="_xl" onclick="goto('https://github.com/essif-lab/framework/tree/master/docs/terms/action.md')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
- <dd>a (signed) digital message that a <a href="#verifier">verifier</a> component sends to a <a href="#holder">holder</a> component asking for specific data from one or more <a href="#verify">verifiable</a> <a href="#credential">credentials</a> that are issued by specific Parties.</dd>
+ <dd>a (signed) digital message that a <a href="#verifier">verifier</a> component sends to a <a href="#holder">holder</a> component asking for specific data from one or more <a href="#verify">verifiable</a> <a href="#credential">credentials</a> that are issued by specific <a href="#party">parties</a>.</dd>
 
  <dt id="principal"><svg class="_slf" onclick="copyUrl('#principal')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/principal">Principal</a> <svg class="_xl" onclick="goto('https://github.com/essif-lab/framework/tree/master/docs/terms/action.md')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the <a href="#party">party</a> for whom, or on behalf of whom, the <a href="#actor">actor</a> is executing an <a href="#action">action</a> (this <a href="#actor">actor</a> is then called an <a href="#agent">agent</a> of that <a href="#party">party</a>).</dd>
@@ -511,7 +511,7 @@
  <dd>the <a href="#party">party</a> that is the <a href="#owner">owner</a> of the <a href="#objective">objective</a> to which a <a href="#risk">risk</a> is associated.</dd>
 
  <dt id="role"><svg class="_slf" onclick="copyUrl('#role')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/role">Role</a> <svg class="_xl" onclick="goto('https://github.com/essif-lab/framework/tree/master/docs/terms/action.md')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
- <dd>a set of characteristics that the entity has, <a href="#action">actions</a> (behaviours) that it may execute, or pieces of <a href="#knowledge">knowledge</a> that it is expected to have in that context, that are referenced to by a specific <a href="#role-name">role name</a>.</dd>
+ <dd>a set of characteristics that the <a href="#entity">entity</a> has, <a href="#action">actions</a> (behaviours) that it may execute, or pieces of <a href="#knowledge">knowledge</a> that it is expected to have in that context, that are referenced to by a specific <a href="#role-name">role name</a>.</dd>
 
  <dt id="role-name"><svg class="_slf" onclick="copyUrl('#role-name')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/role-name">Role name</a> <svg class="_xl" onclick="goto('https://github.com/essif-lab/framework/tree/master/docs/terms/action.md')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>name (text) that refers to (and identifies) a <a href="#role">role</a> in a specific context.</dd>
@@ -628,7 +628,7 @@
  <dd>a <a href="#digital-policy">digital policy</a> that enables an operational <a href="#verifier">verifier</a> component to function in accordance with the <a href="#objective">objectives</a> of its <a href="#principal">principal</a>.</dd>
 
  <dt id="verify"><svg class="_slf" onclick="copyUrl('#verify')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/verify">Verify</a> <svg class="_xl" onclick="goto('https://github.com/essif-lab/framework/tree/master/docs/terms/action.md')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
- <dd>the act, by or on behalf of a Party, of determining whether that data is authentic (i.e. originates from the <a href="#party">party</a> that authored it), timely (i.e. has not expired), and conforms to other specifications that apply to its structure.</dd>
+ <dd>the act, by or on behalf of a <a href="#party">Party</a>, of determining whether that data is authentic (i.e. originates from the <a href="#party">party</a> that authored it), timely (i.e. has not expired), and conforms to other specifications that apply to its structure.</dd>
 
  <dt id="vocabulary"><svg class="_slf" onclick="copyUrl('#vocabulary')"><use href="#_slf"/></svg><a href="https://essif-lab.github.io/framework/docs/terms/vocabulary">Vocabulary</a> <svg class="_xl" onclick="goto('https://github.com/essif-lab/framework/tree/master/docs/terms/action.md')"><use href="#_xl"/></svg><span class="tag">#essiflab</span></dt>
  <dd>the sum or stock of words employed by a language, group, individual, or work or in a field of knowledge.</dd>
